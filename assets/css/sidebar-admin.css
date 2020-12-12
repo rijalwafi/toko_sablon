@@ -1,0 +1,122 @@
+.navigation {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: rgb(31, 193, 221);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation:hover {
+  width: 200px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+.active,
+.navigation ul li :hover {
+  background-color: whitesmoke;
+  border-radius: 10px 0 0 10px;
+}
+.navigation ul li ul {
+  display: none;
+  position: static;
+  border-radius: 0;
+  padding-left: 80px;
+}
+.navigation ul li:hover ul {
+  display: block;
+}
+.sub-icon {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.navigation ul ul li {
+  border-radius: 0;
+  line-height: 42px;
+  border: 10px;
+}
+.navigation ul ul li a {
+  color: rgb(15, 17, 17);
+}
+/* .navigation ul ul li a {
+  color: rgb(230, 234, 235);
+} */
+.navigation ul ul li:hover a {
+  color: whitesmoke;
+  background: #448aff;
+}
+.navigation ul ul {
+  border: 2px;
+  font-weight: 700;
+  background: red;
+  text-decoration: solid;
+}
+.navigation ul:hover ul {
+  background: #448aff;
+}
+.navigation li :hover ul li {
+  display: none;
+  position: absolute;
+  text-align: end;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.navigation ul li .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.navigation ul li .right {
+  position: relative;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+
+  transition: transform 0.4s;
+}
+.navigation ul li:hover .right {
+  position: relative;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  transform: rotate(-180deg);
+  transition: transform 0.4s;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+/* dashboard */
+.dashboard {
+  margin-left: 210px;
+}
+.dashboard-main {
+  margin-top: 30px;
+}

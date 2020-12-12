@@ -1,0 +1,18 @@
+.btn-penjualan {
+  margin: 30px 0 0 50px;
+}
+.btn-penjualan:hover {
+  background: #78f;
+}
+#modalKaryawan .modal {
+  height: 80%;
+  width: 80%;
+}
+#modalEditKaryawan .modal {
+  height: 80%;
+  width: 80%;
+}
+#modalHapus .modal {
+  height: 50%;
+  width: 50%;
+}

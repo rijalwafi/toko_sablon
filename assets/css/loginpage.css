@@ -1,0 +1,22 @@
+img .login-page-left {
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+  background-size: cover;
+}
+.input-field .prefix.active {
+  background: inherit;
+}
+.input-field input[type='text']:focus + label {
+  color: #000;
+}
+.input-field label {
+  color: #000;
+  background: inherit;
+}
+.input-field input[type='text']:focus + label {
+  color: #000;
+}
+.input-field .prefix.active {
+  color: #000;
+}

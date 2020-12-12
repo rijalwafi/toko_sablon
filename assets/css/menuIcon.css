@@ -1,0 +1,24 @@
+header nav .menu-icon-container {
+  display: none;
+  cursor: pointer;
+}
+.line1,
+.line2,
+.line3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.5s;
+}
+.change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+  transform: rotate(-45deg) translate(-9px, 7px);
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -7px);
+}
