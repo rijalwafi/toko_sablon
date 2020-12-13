@@ -168,7 +168,7 @@
 
 
                                 <div class="co collapsible-header">
-                                    Harga: <?= $tb_product['selling_price'] ?>
+                                    Hara: <?= $tb_product['selling_price'] ?>
 
                                     <!-- <input type="hidden" name="selling_price" id="selling_price"
                                         value="<?= $tb_product['selling_price'] ?>" placeholder="Jumlah Beli"> -->
