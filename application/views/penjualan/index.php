@@ -38,7 +38,7 @@
               <td>
                 <span>
                   <div class="btn-floating btn-small teal lighten-1  tooltipped" data-tooltip="kirim barang">
-                  <a href="#modalKirim<?= $tb_sales['id_sales'] ?>" class="modal-trigger"><i class="material-icons">send</i></a>
+                  <a href="#modalKirim<?= $tb_sales['id_sales'] ?>" class="modal-trigger"><i class="material-icons" >send</i></a>
                   </div>
                 </span>
               </td>
