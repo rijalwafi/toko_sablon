@@ -35,7 +35,7 @@
                     <td>
                         <span>
                             <div class="btn-floating btn-small teal lighten-1  tooltipped" data-tooltip="kirim barang"
-                                <?php $status='done';if ($tb_sales['status']==$status) { echo 'disabled';} ?>>
+                                <?php $status='kirim';if ($tb_sales['status']==$status) { echo 'disabled';} ?>>
                                 <a href="#modalKirim<?= $tb_sales['id_sales'] ?>" class="modal-trigger"><i
                                         class="material-icons">send</i></a>
                             </div>
