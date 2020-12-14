@@ -88,14 +88,14 @@
                             </div>
 
                             <div class="input-field col s6">
-                                <input placeholder="total_beli" name="total_beli" id="total_beli" type="number"
-                                    class="validate">
+                                <input placeholder="masukan jumlah barang yang ingin dibeli" name="total_beli"
+                                    id="total_beli" type="text" class="validate">
                                 <label for="total_beli">Jumlah Barang</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6 right  ">
-                                <input placeholder="total_harga" id="total_harga" name="total_harga" type="number"
+                                <input placeholder="0" id="total_harga" name="total_harga" type="number"
                                     class="validate" readonly>
                                 <label for="total_harga">Total Pembayaran</label>
                             </div>

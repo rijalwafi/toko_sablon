@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Des 2020 pada 16.27
--- Versi server: 10.4.8-MariaDB
--- Versi PHP: 7.3.10
+-- Generation Time: Dec 14, 2020 at 07:27 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_product`
+-- Table structure for table `tb_product`
 --
 
 CREATE TABLE `tb_product` (
@@ -37,51 +38,43 @@ CREATE TABLE `tb_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_product`
+-- Dumping data for table `tb_product`
 --
 
 INSERT INTO `tb_product` (`id_product`, `name_product`, `purchase_price`, `selling_price`, `stock_product`, `image`) VALUES
-(1, 'Galon Aqua', 18000, 20000, 12, 'aqua.jpg'),
-(2, 'Gas 3 Kg', 18000, 22000, 10, 'gas3kg.jpg'),
-(3, 'Gas 12 Kg', 50000, 60000, 8, 'gas12kg.jpg');
+(1, 'Galon Aqua', 18000, 20000, 11, 'aqua1.jpg'),
+(2, 'Gas 3 Kg', 18000, 22000, 5, 'gas3kg.jpg'),
+(3, 'Gas 12 Kg', 50000, 60000, 6, 'gas12kg.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_sales`
+-- Table structure for table `tb_sales`
 --
 
 CREATE TABLE `tb_sales` (
   `id_sales` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
-  `amount` int(11) NOT NULL,
   `jumlah_beli` int(100) NOT NULL,
+  `amount` int(11) NOT NULL,
   `sales_date` date NOT NULL,
   `status` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_sales`
+-- Dumping data for table `tb_sales`
 --
 
-INSERT INTO `tb_sales` (`id_sales`, `id_user`, `id_product`, `amount`, `jumlah_beli`, `sales_date`, `status`) VALUES
-(1, 7, 2, 22000, 0, '2020-08-31', 'kirim'),
-(2, 7, 1, 20000, 0, '2020-08-31', 'kirim'),
-(3, 7, 3, 60000, 0, '2020-08-31', 'kirim'),
-(5, 7, 1, 20000, 0, '2020-09-04', 'kirim'),
-(6, 7, 1, 20000, 0, '2020-09-04', ''),
-(7, 7, 2, 22000, 0, '2020-12-12', ''),
-(8, 7, 1, 20000, 0, '2020-12-12', ''),
-(9, 7, 3, 60000, 0, '2020-12-12', ''),
-(10, 7, 1, 20000, 0, '2020-12-12', ''),
-(11, 7, 1, 20000, 0, '2020-12-12', ''),
-(12, 7, 2, 44000, 2, '2020-12-12', '');
+INSERT INTO `tb_sales` (`id_sales`, `id_user`, `id_product`, `jumlah_beli`, `amount`, `sales_date`, `status`) VALUES
+(16, 7, 2, 4, 88000, '2020-12-14', 'done'),
+(17, 9, 2, 10, 220000, '2020-12-14', ''),
+(18, 9, 1, 1, 20000, '2020-12-14', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_user`
+-- Table structure for table `tb_user`
 --
 
 CREATE TABLE `tb_user` (
@@ -95,57 +88,58 @@ CREATE TABLE `tb_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_user`
+-- Dumping data for table `tb_user`
 --
 
 INSERT INTO `tb_user` (`id_user`, `username`, `password`, `gender`, `phone_number`, `address`, `level_user`) VALUES
 (1, 'owner', 'b3duZXI=', 'Pria', '08998868936', 'Tambun', 'owner'),
 (6, 'karyawan', 'a2FyeWF3YW4=', 'Pria', '08998868937', 'Tambun', 'karyawan'),
-(7, 'konsumen', 'a29uc3VtZW4=', 'Pria', '08998868938', 'Tambun', 'konsumen');
+(7, 'konsumen', 'a29uc3VtZW4=', 'Pria', '08998868938', 'Tambun', 'konsumen'),
+(9, 'anton', 'a29uc3VtZW4=', 'Pria', '085718448978', 'tes', 'konsumen');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tb_product`
+-- Indexes for table `tb_product`
 --
 ALTER TABLE `tb_product`
   ADD PRIMARY KEY (`id_product`);
 
 --
--- Indeks untuk tabel `tb_sales`
+-- Indexes for table `tb_sales`
 --
 ALTER TABLE `tb_sales`
   ADD PRIMARY KEY (`id_sales`);
 
 --
--- Indeks untuk tabel `tb_user`
+-- Indexes for table `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_product`
+-- AUTO_INCREMENT for table `tb_product`
 --
 ALTER TABLE `tb_product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_sales`
+-- AUTO_INCREMENT for table `tb_sales`
 --
 ALTER TABLE `tb_sales`
-  MODIFY `id_sales` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_sales` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_user`
+-- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
