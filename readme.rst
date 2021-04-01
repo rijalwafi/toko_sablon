@@ -73,13 +73,12 @@ beberapa fitur yang ada di website ini sebagai berikut :
 
 2. CRUD BARANG
 
-
 3. Kelola Pembayaran
 
 4. Kelola Pesanan
 
 5. Laporan Penjualan
-j
+
 6. Halaman Dashboard menampilkan : orderan baru, pendapatan harian dan total customer terdaftar.
 
 -Fitur untuk Konsumen
