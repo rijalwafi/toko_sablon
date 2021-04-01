@@ -1,5 +1,6 @@
-Assalamualaikum ,
-Saya inging berbagi Source Code untuk kalian yangi ingin belajar codeigniter 3. Aplikasi ini gratis untuk personal use atau commercial use
+
+
+Saya ingin berbagi Source Code untuk kalian yangi ingin belajar codeigniter 3. Aplikasi ini gratis untuk personal use atau commercial use
 Aplikasi ini saya buat sebagai latihan untuk menggunakana framwework codeigniter 3, dengan tema
 toko baju sablon. 
 Cara Pemasangan di server local dengan xampp :
