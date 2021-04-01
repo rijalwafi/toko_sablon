@@ -12,7 +12,7 @@
 		{
 			$data['produk'] = $this->db->get('tb_product')->result_array();
 			$p = $this->uri->segment(3);
-			$data['title'] = "Aplikasi Depot Air";
+			$data['title'] = "Eclooth";
 			$data['judul'] = "Manajemen Produk";
 			$data['folder'] = "produk";
 			if (empty($p)) {
@@ -46,14 +46,29 @@
 						echo $this->upload->display_error();
 					}
 				}
+				$blank_image=$this->input->post('image');
+				
+				if($blank_image==""){
 			$data=[
 				'name_product' => $this->input->post('name_product'),
 				'purchase_price' => $this->input->post('purchase_price'),
 				'selling_price' => $this->input->post('selling_price'),
 				'stock_product' => $this->input->post('stock_product'),
-				'image' => $new_image,
+				'size'=>$this->input->post('size'),
+				'keterangan'=>$this->input->post('keterangan'),
 				
 			];
+		}else{
+			$data=[
+				'name_product' => $this->input->post('name_product'),
+				'purchase_price' => $this->input->post('purchase_price'),
+				'selling_price' => $this->input->post('selling_price'),
+				'stock_product' => $this->input->post('stock_product'),
+				'size'=>$this->input->post('size'),
+				'keterangan'=>$this->input->post('keterangan'),
+				'image' => $new_image,
+			];
+		}
 			$this->db->insert('tb_product', $data);
 			redirect('produk/p');
 		}
@@ -87,14 +102,28 @@
 				}
 
 				$new_image = $this->input->post('current_image');
+				$blank_image=$this->input->post('image');
+				if($blank_image==""){
 			$data=[
 				'name_product' => $this->input->post('name_product'),
 				'purchase_price' => $this->input->post('purchase_price'),
 				'selling_price' => $this->input->post('selling_price'),
 				'stock_product' => $this->input->post('stock_product'),
-				// 'image' => $new_image,
+				'size'=>$this->input->post('size'),
+				'keterangan'=>$this->input->post('keterangan'),
+				
 			];
-
+		}else{
+			$data=[
+				'name_product' => $this->input->post('name_product'),
+				'purchase_price' => $this->input->post('purchase_price'),
+				'selling_price' => $this->input->post('selling_price'),
+				'stock_product' => $this->input->post('stock_product'),
+				'size'=>$this->input->post('size'),
+				'keterangan'=>$this->input->post('keterangan'),
+				'image' => $new_image,
+			];
+		}
 			$this->db->where('id_product', $id_product);			
 			$this->db->update('tb_product', $data);
 			redirect('produk/p');

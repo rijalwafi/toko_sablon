@@ -1,0 +1,27 @@
+instalasi website
+1.extrak file zip pengantar-desa
+2. pindahkan folder pengantar-desa ke localhost htdocs
+3. buka applikasi xampp
+4. buka localhost/phpmyadmin
+5. buat database baru dengan nama db_pengantar_desa_ci
+6. buka mozila/chrome/opera pada laptop 
+7. tuliskan pada website localhost/pengantar-desa
+
+cara pemakaian website
+user ada 2 rt dan rw
+1.login rt ->
+  username :RT5
+  password :123
+2.login rw ->
+  username :novia
+  password :12345
+
+hak akses rw :
+1. Menambah, menghapus, merubah data pengguna (RT)
+2. Melihat laporan pembuatan surat
+
+hak akses rt :
+1. membuat surat pengantar
+2. menambahkan data warga
+
+Sekian terima gaji, kalo ada yang bingung / error silakan tanya

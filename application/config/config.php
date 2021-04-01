@@ -23,7 +23,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/SCI_DA';
+$config['base_url'] = 'http://localhost/toko_sablon/';
+
+
+/**
+ * RajaOngkir API Key
+ * Silakan daftar akun di RajaOngkir.com untuk mendapatkan API Key
+ * http://rajaongkir.com/akun/daftar
+ */
+$config['rajaongkir_api_key'] = "";
+
+/**
+ * RajaOngkir account type: starter or basic
+ * http://rajaongkir.com/dokumentasi#akun-ringkasan
+ * 
+ */
+$config['rajaongkir_account_type'] = "basic";
 
 /*
 |--------------------------------------------------------------------------
@@ -136,7 +151,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = 'vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------

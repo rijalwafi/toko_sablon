@@ -12,7 +12,7 @@
 		{
 			$data['user'] = $this->modeluser->selainkonsumen()->result_array();
 			$p = $this->uri->segment(3);
-			$data['title'] = "Aplikasi Depot Air";
+			$data['title'] = "Eclooth";
 			$data['judul'] = "Manajemen User";
 			$data['folder'] = "user";
 			if (empty($p)) {
@@ -26,7 +26,7 @@
 			$this->load->view('beranda',$data);
 		}
 
-		public function add_user(){
+		public function add_user_admin(){
 			$data=[
 				'username' => $this->input->post('username'),
 				'phone_number' => $this->input->post('phone_number'),
@@ -39,7 +39,7 @@
 			redirect('user/p');
 		}
 
-		public function edit_user(){
+		public function edit_user_admin(){
 
 			$id_user = $this->input->post('id_user');
 			$data=[
@@ -53,6 +53,34 @@
 			$this->db->where('id_user', $id_user);			
 			$this->db->update('tb_user', $data);
 			redirect('user/p');
+		}
+		public function edit_user_kustomer(){
+			$data['title']="Edit Data";
+			$data['judul']="Edit Data Profil";
+			$id_user = $this->input->post('id_user');
+			$password_sekarang=$this->input->post('password');
+			if($password_sekarang==""){
+			$data=[
+				'username' => $this->input->post('username'),
+				'phone_number' => $this->input->post('phone_number'),
+				'address' => $this->input->post('address'),
+				'gender' => $this->input->post('gender'),
+				'level_user' => $this->input->post('level_user'),
+			];
+		}else{
+			$data=[
+				'username' => $this->input->post('username'),
+				'phone_number' => $this->input->post('phone_number'),
+				'address' => $this->input->post('address'),
+				'gender' => $this->input->post('gender'),
+				'level_user' => $this->input->post('level_user'),
+				'password' => base64_encode($this->input->post('password'))
+
+			];
+		}
+			$this->db->where('id_user', $id_user);			
+			$this->db->update('tb_user', $data);
+			redirect('konsumen/p');
 		}
 
 		public function delete_user(){

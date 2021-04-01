@@ -10,7 +10,7 @@
 		public function p()
 		{
 			$p = $this->uri->segment(3);
-			$data['title'] = "Aplikasi Depot Air";
+			$data['title'] = "Eclooth";
 			$data['folder'] = "beranda";
 			if (empty($p)) {
 				$p = "index";
